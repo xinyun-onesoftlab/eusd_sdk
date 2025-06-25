@@ -15,12 +15,7 @@
 <script src="./EUSD_library.js"></script>
 <script>
     window.onload = () => {
-        const library = window.EUSD_library
-        if (library?.generateMnemonic) {
-            console.log('Mnemonic:', library.generateMnemonic());
-        } else {
-            console.warn('generateMnemonic not found.');
-        }
+        console.log(window.EUSD)
     };
 </script>
 
