@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+
+<body>
+<h1>Generate EUSD Wallet</h1>
+<button onclick="test()">Generate Account</button>
+<pre id="output"></pre>
+</body>
+<script src="./EUSD_library.js"></script>
+<script>
+    window.onload = () => {
+        const library = window.EUSD_library
+        if (library?.generateMnemonic) {
+            console.log('Mnemonic:', library.generateMnemonic());
+        } else {
+            console.warn('generateMnemonic not found.');
+        }
+    };
+</script>
+
+</html>
