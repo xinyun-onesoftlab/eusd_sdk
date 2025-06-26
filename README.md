@@ -70,3 +70,9 @@ Transfers EUSD to a specified recipient by making a POST request to the external
     - `amount` (`number|string`) – Amount of EUSD to transfer (need transfer 10 juts pass 10).
     - `secretPhrase` (`string`) – Sender’s secret phrase.
 - **Returns:** `Promise<Object|null>` – A JSON object with the transaction result, or `null` on error.
+
+
+---
+
+### Flutter Reference
+https://api.dart.dev/dart-js_interop/
