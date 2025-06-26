@@ -76,3 +76,65 @@ Transfers EUSD to a specified recipient by making a POST request to the external
 
 ### Flutter Reference
 https://api.dart.dev/dart-js_interop/
+
+
+## Code Sample (Flutter)
+
+**pubspec.yaml**
+>dependencies: <br/>
+  js: ^0.6.5
+ 
+
+**pubspec.yaml**
+>@JS('EUSD_library')<br/>
+> library eusd_library;
+>import 'package:js/js.dart';<br/>
+><br/>@JS()<br/>
+>external String generateMnemonic();<br/>
+><br/>@JS()<br/>
+>external JsAccount generateAccount(String mnemonic);<br/>
+><br/>@JS()<br/>
+>external Object accountSync(String mnemonic);<br/> // returns a Promise
+><br/>@JS()<br/>
+>external Object getAccountTransaction(String accountRS);<br/>
+><br/>@JS()<br/>
+>external Object getTransactionDetail(String fullHash);<br/>
+><br/>@JS()<br/>
+>external Object getTotalDistribute();<br/>
+><br/>@JS()<br/>
+>external Object getConstant();<br/>
+><br/>@JS()<br/>
+>external Object transferEUSD(String address, dynamic amount, String secretPhrase);<br/>
+><br/>@JS()<br/>
+>@anonymous
+>class JsAccount {
+>external String get account;<br/>
+>external String get accountRS;<br/>
+>external String get publicKey;<br/>
+>}
+
+**index.html**<br/>
+`<script src="EUSD_library.js"></script>`<br/>
+`<script defer src="main.dart.js"></script>`
+
+**Dart Code**
+>import 'eusd_library_interop.dart';<br/>
+><br/>
+>void main() {<br/>
+>final mnemonic = generateMnemonic();<br/>
+>print("Mnemonic: \$mnemonic");<br/>
+><br/>
+>final account = generateAccount(mnemonic);<br/>
+>print("Account ID: \${account.accountRS}");<br/>
+>}
+
+
+**Remark**<br/>
+All async JS functions (accountSync, etc.) return JS Promises, so to handle them in Dart, use promiseToFuture from package:js/js_util.dart.
+>import 'dart:js_util';<br/>
+>import 'eusd_library_interop.dart';<br/>
+><br/>
+>Future<void> loadAccount() async { {<br/>
+>final result = await promiseToFuture(accountSync("your secret phrase"));<br/>
+> print(result);<br/>
+>}
