@@ -12,10 +12,33 @@
 <button onclick="test()">Generate Account</button>
 <pre id="output"></pre>
 </body>
-<script src="./EUSD_library.js"></script>
+<!--<script src="./EUSD_library.js"></script>-->
+<!--<script src="./nxtjs.js"></script>-->
+<script src="./eusd_library.js"></script>
 <script>
-    window.onload = () => {
-        console.log(window.EUSD)
+    window.onload = async () => {
+        // const result = eusd.generateMnemonic()
+        // console.log(result)
+
+        // const resultAccountNxt = eusd.generateAccount(result)
+        // console.log(resultAccountNxt)
+
+        // const result = await eusd.getAccountBalance("EUSD-QPPC-ZTMA-A665-FXFJR")
+        // console.log(result)
+        //
+
+        // const result = await eusd.getAccountTransaction("EUSD-QPPC-ZTMA-A665-FXFJR")
+        // console.log(result)
+        //
+
+        // const result = await eusd.getTransactionDetail("a3a652fbef94f3d6bb8b83312c1781a58423c1e4e3fce7da814bc1a6a717c4e1")
+        // console.log(result)
+        //
+        // const result = await eusd.getTotalDistribute()
+        // console.log(result)
+        //
+        // const result = await eusd.getConstant()
+        // console.log(result)
     };
 </script>
 

@@ -43,6 +43,16 @@ Fetches transactions for a given account.
 
 ---
 
+### `getAccountBalance(accountRS)`
+
+Fetches balance for a given account.
+
+- **Parameters:**
+    - `accountRS` (`string`) – Reed-Solomon (RS) account ID.
+- **Returns:** `Promise<Array|null>` – An array of balance objects or `null` on error.
+
+---
+
 ### `getTransactionDetail(fullHash)`
 
 Fetches detailed information about a specific transaction.
