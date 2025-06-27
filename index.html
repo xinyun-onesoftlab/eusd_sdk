@@ -8,37 +8,38 @@
 </head>
 
 <body>
-<h1>Generate EUSD Wallet</h1>
-<button onclick="test()">Generate Account</button>
-<pre id="output"></pre>
 </body>
-<!--<script src="./EUSD_library.js"></script>-->
-<!--<script src="./nxtjs.js"></script>-->
 <script src="./eusd_library.js"></script>
 <script>
     window.onload = async () => {
         // const result = eusd.generateMnemonic()
         // console.log(result)
+        // output short exhibit caution wife dilemma kick ordinary chaos motion easy gas
 
-        // const resultAccountNxt = eusd.generateAccount(result)
+        // const resultAccount = eusd.generateAccount("output short exhibit caution wife dilemma kick ordinary chaos motion easy gas")
+        // console.log(resultAccount)
+        // {account: '15308679999381802325', accountRS: 'EUSD-H5CP-D8ZN-G529-FVUWA', publicKey: '401b648740bda3dd9c0ec23eb92f99e8829800d2c18270ea286aff9d1b259a1c'}
+
+        // const resultAccountNxt = await eusd.accountSync("EUSD-H5CP-D8ZN-G529-FVUWA")
         // console.log(resultAccountNxt)
+        // {accountRS: 'EUSD-VXEZ-EZ7X-9C9H-5WYED', publicKey: '51b07fa2d3f5e11f8adafc64060b90f027f933c85581d1d9c03025e4f0da6c70', requestProcessingTime: 0, account: '3869678843201451423'}
 
-        // const result = await eusd.getAccountBalance("EUSD-QPPC-ZTMA-A665-FXFJR")
-        // console.log(result)
-        //
+        // const result3 = await eusd.getAccountTransaction("EUSD-QPPC-ZTMA-A665-FXFJR")
+        // console.log(result3)
 
-        // const result = await eusd.getAccountTransaction("EUSD-QPPC-ZTMA-A665-FXFJR")
-        // console.log(result)
-        //
+        // const result2 = await eusd.getAccountBalance("EUSD-QPPC-ZTMA-A665-FXFJR")
+        // console.log(result2)
+        // {balance: 16.94, address: 'EUSD-QPPC-ZTMA-A665-FXFJR'}
 
-        // const result = await eusd.getTransactionDetail("a3a652fbef94f3d6bb8b83312c1781a58423c1e4e3fce7da814bc1a6a717c4e1")
+        // const result = await eusd.getTransactionDetail("d05d21545730f4dfa2313086adcff86622035ff9bd4a84499bbd30fb6f83ea64")
         // console.log(result)
-        //
+
         // const result = await eusd.getTotalDistribute()
         // console.log(result)
-        //
-        // const result = await eusd.getConstant()
+
+        // const result = await eusd.transferEUSD("EUSD-T5F4-BQ9A-HCH2-DPZT3",0.2,"e99f0d84-f732-45a0-ac93-96a9d8964724")
         // console.log(result)
+        // result follow getTransactionDetail
     };
 </script>
 
